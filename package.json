@@ -1,0 +1,17 @@
+{
+  "name": "extensions-keep",
+  "version": "1.0.0",
+  "description": "Simplify the management of your extensions: save, install and share with a single click",
+  "repository": "https://github.com/pflry/extensions-keep",
+  "author": "Paul Fleury <hello@paulfleury.com>",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "archiver": "^7.0.1",
+    "stylelint": "^16.10.0",
+    "stylelint-config-idiomatic-order": "^10.0.0"
+  },
+  "scripts": {
+    "lint": "stylelint admin/css/admin-style.css --fix --config .stylelintrc-css.json",
+    "zip": "node zipper.js"
+  }
+}

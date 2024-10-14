@@ -1,0 +1,58 @@
+/* svg icons */
+.icon {
+	width: 24px;
+	height: auto;
+	margin-right: 4px;
+	vertical-align: text-bottom;
+}
+
+/* elements */
+.headline-h2 {
+	margin-bottom: 0;
+}
+
+p.submit {
+	margin-top: 0;
+}
+
+/* import */
+.ekeep-upload input[type="file"] {
+	min-width: 600px;
+}
+
+/* journal */
+.ekeep-log {
+	margin-top: 1.3em;
+}
+
+.ekeep-log tbody td {
+	padding: 10px 9px;
+	background-color: #f0f6fc;
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1);
+}
+
+.ekeep-log tbody tr td:first-child,
+.ekeep-log tbody tr td:nth-child(2) {
+	white-space: nowrap;
+}
+
+.ekeep-log tbody tr:last-child td {
+	box-shadow: none;
+}
+
+.ekeep-log tbody td p:first-child {
+	margin: 0 0 4px;
+}
+
+.ekeep-log tbody td p,
+.ekeep-log .export-plugins {
+	margin: 6px 0 4px;
+}
+
+.ekeep-plugin-list .sep:last-child {
+	display: none;
+}
+
+.ekeep-delete.button {
+	margin-top: 24px;
+}
