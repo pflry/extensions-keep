@@ -37,7 +37,7 @@ class EKEEP_Admin {
 
   public function handle_reset_log() {
     if (!current_user_can('manage_options')) {
-      wp_die(esc_html__('Vous n\'avez pas les permissions suffisantes pour effectuer cette action.', 'extensions-keep'));
+      wp_die(esc_html__('You do not have sufficient permissions to perform this action.', 'extensions-keep'));
     }
 
     check_admin_referer('ekeep_reset_log', 'ekeep_reset_log_nonce');
@@ -52,7 +52,7 @@ class EKEEP_Admin {
     ?>
     <form id="ekeep-export-form" method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
       <input type="hidden" name="action" value="ekeep_export_plugins">
-      <?php submit_button(esc_html__('Exporter les extensions', 'extensions-keep'), 'primary'); ?>
+      <?php submit_button(esc_html__('Export plugins', 'extensions-keep'), 'primary'); ?>
     </form>
     <?php
   }
@@ -65,7 +65,7 @@ class EKEEP_Admin {
       <input type="file" name="plugins_list_file" accept=".json">
       <?php 
       submit_button(
-        esc_html__('Importer et installer les extensions', 'extensions-keep'), 
+        esc_html__('Import and install plugins', 'extensions-keep'), 
         'primary', 
         'submit', 
         true, 

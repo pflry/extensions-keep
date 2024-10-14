@@ -16,9 +16,10 @@ archive.file('extensions-keep.php', { name: 'extensions-keep.php' });
 archive.file('readme.txt', { name: 'readme.txt' });
 
 // append empty directory
-archive.append(null, { name: 'languages/' });
+// archive.append(null, { name: 'languages/' });
 
 // append files from a sub-directory
+archive.directory('languages/', 'languages');
 archive.directory('includes/', 'includes');
 archive.directory('admin/', 'admin');
 archive.directory('assets/', 'assets');

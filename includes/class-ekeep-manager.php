@@ -21,7 +21,7 @@ class EKEEP_Plugin_Manager {
     $nonce = isset($_POST['ekeep_upload_nonce']) ? sanitize_text_field(wp_unslash($_POST['ekeep_upload_nonce'])) : '';
 
     if (!wp_verify_nonce($nonce, 'ekeep_upload_plugins')) {
-      wp_die(esc_html__('Erreur de sécurité. Veuillez réessayer.', 'extensions-keep'));
+      wp_die(esc_html__('Security error. Please try again.', 'extensions-keep'));
     }
 
     if (!function_exists('WP_Filesystem')) {
@@ -29,11 +29,11 @@ class EKEEP_Plugin_Manager {
     }
 
     if (!current_user_can('manage_options')) {
-      wp_die(esc_html__('Vous n\'avez pas les permissions suffisantes pour effectuer cette action.', 'extensions-keep'));
+      wp_die(esc_html__('You do not have sufficient permissions to perform this action.', 'extensions-keep'));
     }
 
     if (!isset($_FILES['plugins_list_file']) || !isset($_FILES['plugins_list_file']['error']) || $_FILES['plugins_list_file']['error'] !== UPLOAD_ERR_OK) {
-      wp_redirect(add_query_arg('ekeep_message', urlencode(__('Aucun fichier n\'a été uploadé ou une erreur s\'est produite lors de l\'upload.', 'extensions-keep')), admin_url('plugins.php?page=extensions-keep')));
+      wp_redirect(add_query_arg('ekeep_message', urlencode(__('No file was uploaded or an error occurred during upload.', 'extensions-keep')), admin_url('plugins.php?page=extensions-keep')));
       exit;
     }
 
@@ -49,7 +49,7 @@ class EKEEP_Plugin_Manager {
     // Vérifier que le fichier est bien un JSON
     $finfo = new finfo(FILEINFO_MIME_TYPE);
     if ($finfo->file($uploaded_file['tmp_name']) !== 'application/json') {
-      wp_redirect(add_query_arg('ekeep_message', urlencode(__('Le fichier uploadé n\'est pas un fichier JSON valide.', 'extensions-keep')), admin_url('plugins.php?page=extensions-keep')));
+      wp_redirect(add_query_arg('ekeep_message', urlencode(__('The uploaded file is not a valid JSON file.', 'extensions-keep')), admin_url('plugins.php?page=extensions-keep')));
       exit;
     }
 
@@ -57,21 +57,21 @@ class EKEEP_Plugin_Manager {
     global $wp_filesystem;
 
     if (!$wp_filesystem->exists($uploaded_file['tmp_name'])) {
-      wp_redirect(add_query_arg('ekeep_message', urlencode(__('Le fichier uploadé n\'a pas été trouvé.', 'extensions-keep')), admin_url('plugins.php?page=extensions-keep')));
+      wp_redirect(add_query_arg('ekeep_message', urlencode(__('The uploaded file was not found.', 'extensions-keep')), admin_url('plugins.php?page=extensions-keep')));
       exit;
     }
 
     $file_content = $wp_filesystem->get_contents($uploaded_file['tmp_name']);
     if (false === $file_content) {
-      wp_redirect(add_query_arg('ekeep_message', urlencode(__('Erreur lors de la lecture du fichier uploadé.', 'extensions-keep')), admin_url('plugins.php?page=extensions-keep')));
+      wp_redirect(add_query_arg('ekeep_message', urlencode(__('Error reading uploaded file.', 'extensions-keep')), admin_url('plugins.php?page=extensions-keep')));
       exit;
     }
 
     $imported_data = json_decode($file_content, true);
 
     if (json_last_error() !== JSON_ERROR_NONE || !$this->validate_imported_data($imported_data)) {
-      $this->logger->add_log_entry('Import échoué', 'Fichier JSON invalide ou structure incorrecte');
-      wp_redirect(add_query_arg('ekeep_message', urlencode(__('Le fichier importé n\'est pas un JSON valide ou ne respecte pas la structure attendue.', 'extensions-keep')), admin_url('plugins.php?page=extensions-keep')));
+      $this->logger->add_log_entry('Import failed', 'Invalid JSON file or incorrect structure');
+      wp_redirect(add_query_arg('ekeep_message', urlencode(__('The imported file is not a valid JSON or does not respect the expected structure.', 'extensions-keep')), admin_url('plugins.php?page=extensions-keep')));
       exit;
     }
 
@@ -96,16 +96,16 @@ class EKEEP_Plugin_Manager {
     ];
 
     // Créer un résumé détaillé des plugins importés
-    $import_summary = "<p>Fichier importé : <strong>" . esc_html($uploaded_file['name']) . "</strong></p>";
-    $import_summary .= "<p>Extensions installées : " . $this->format_plugin_list($results['installed']) . "</p>";
-    $import_summary .= "<p>Extensions mises à jour : " . $this->format_plugin_list($results['updated']) . "</p>";
-    $import_summary .= "<p>Extensions ignorées : " . $this->format_plugin_list($plugins_unchanged) . "</p>";
+    $import_summary = "<p>Imported file: <strong>" . esc_html($uploaded_file['name']) . "</strong></p>";
+    $import_summary .= "<p>Installed plugins: " . $this->format_plugin_list($results['installed']) . "</p>";
+    $import_summary .= "<p>Upgraded plugins: " . $this->format_plugin_list($results['updated']) . "</p>";
+    $import_summary .= "<p>Ignored plugins: " . $this->format_plugin_list($plugins_unchanged) . "</p>";
 
-    $this->logger->add_log_entry('Import réussi', $import_summary);
+    $this->logger->add_log_entry('Successful import', $import_summary);
 
     // Rediriger avec un message de succès
     /* translators: %s: résumé de l'importation */
-    $message = sprintf(__('Import terminé. %s', 'extensions-keep'), esc_html($import_summary));
+    $message = sprintf(__('Import complete. %s', 'extensions-keep'), esc_html($import_summary));
     wp_redirect(add_query_arg('ekeep_message', urlencode($message), admin_url('plugins.php?page=extensions-keep')));
 
     exit;

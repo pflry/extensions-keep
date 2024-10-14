@@ -16,9 +16,9 @@ class EKEEP_Installer {
       $result = $this->install_plugin($plugin);
       if ($result === true) {
         $results[] = $plugin;
-        $this->logger->add_log_entry('Extension installée', sprintf('<strong>%s</strong> (%s)', esc_html($plugin['title']), esc_html($plugin['version'])));
+        $this->logger->add_log_entry('Installed plugin', sprintf('<strong>%s</strong> (%s)', esc_html($plugin['title']), esc_html($plugin['version'])));
       } else {
-        $this->logger->add_log_entry('Échec d\'installation', sprintf('<strong>%s</strong> (%s) - %s', esc_html($plugin['title']), esc_html($plugin['version']), $result));
+        $this->logger->add_log_entry('Installation failed', sprintf('<strong>%s</strong> (%s) - %s', esc_html($plugin['title']), esc_html($plugin['version']), $result));
       }
     }
     return $results;
@@ -34,9 +34,9 @@ class EKEEP_Installer {
       $result = $this->update_plugin($plugin);
       if ($result === true) {
         $results[] = $plugin;
-        $this->logger->add_log_entry('Extension mise à jour', sprintf('<strong>%s</strong> (%s)', esc_html($plugin['title']), esc_html($plugin['version'])));
+        $this->logger->add_log_entry('Upgraded plugin', sprintf('<strong>%s</strong> (%s)', esc_html($plugin['title']), esc_html($plugin['version'])));
       } else {
-        $this->logger->add_log_entry('Échec de mise à jour', sprintf('<strong>%s</strong> (%s) - %s', esc_html($plugin['title']), esc_html($plugin['version']), $result));
+        $this->logger->add_log_entry('Upgrade failed', sprintf('<strong>%s</strong> (%s) - %s', esc_html($plugin['title']), esc_html($plugin['version']), $result));
       }
     }
     return $results;
@@ -53,7 +53,7 @@ class EKEEP_Installer {
     $installed = $upgrader->install($api->download_link);
 
     if (is_wp_error($installed) || $installed === false) {
-      return is_wp_error($installed) ? $installed->get_error_message() : 'Installation échouée';
+      return is_wp_error($installed) ? $installed->get_error_message() : 'Failed to install';
     }
 
     activate_plugin($plugin['name']);

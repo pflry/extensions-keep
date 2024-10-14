@@ -28,10 +28,10 @@ class EKEEP_Logger {
   public function display_log() {
     $log = $this->get_log();
     if (empty($log)) {
-      echo '<p>' . esc_html__('Aucune action enregistrée.', 'extensions-keep') . '</p>';
+      echo '<p>' . esc_html__('No action recorded.', 'extensions-keep') . '</p>';
     } else {
       echo '<table class="widefat ekeep-log">';
-      echo '<thead><tr><th>' . esc_html__('Date', 'extensions-keep') . '</th><th>' . esc_html__('Action', 'extensions-keep') . '</th><th>' . esc_html__('Détails', 'extensions-keep') . '</th></tr></thead>';
+      echo '<thead><tr><th>' . esc_html__('Date', 'extensions-keep') . '</th><th>' . esc_html__('Action', 'extensions-keep') . '</th><th>' . esc_html__('Details', 'extensions-keep') . '</th></tr></thead>';
       echo '<tbody>';
       foreach ($log as $entry) {
         echo '<tr>';
@@ -47,7 +47,7 @@ class EKEEP_Logger {
     echo '<form method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
     echo '<input type="hidden" name="action" value="ekeep_reset_log">';
     wp_nonce_field('ekeep_reset_log', 'ekeep_reset_log_nonce');
-    submit_button(__('Réinitialiser le journal', 'extensions-keep'), 'ekeep-delete', 'submit', false);
+    submit_button(__('Reset log', 'extensions-keep'), 'ekeep-delete', 'submit', false);
     echo '</form>';
   }
 }

@@ -8,7 +8,7 @@ class EKEEP_Saver {
 
   public function export_plugin_list() {
     if (!current_user_can('manage_options')) {
-      wp_die(esc_html__('Vous n\'avez pas les permissions suffisantes pour effectuer cette action.', 'extensions-keep'));
+      wp_die(esc_html__('You don\'t have sufficient permissions to perform this action.', 'extensions-keep'));
     }
 
     $active_plugins = get_option('active_plugins');
@@ -44,7 +44,7 @@ class EKEEP_Saver {
     $plugin_summary = rtrim($plugin_summary, " <span class='sep'>|</span> ") . "</span>";
 
     // Mettre à jour le journal
-    $this->logger->add_log_entry('Export réussi', sprintf('Fichier exporté : <strong>%s</strong><div class="export-plugins">Extensions : %s</div>', esc_html($filename), $plugin_summary));
+    $this->logger->add_log_entry('Export success', sprintf('Exported file: <strong>%s</strong><div class="export-plugins">Plugins: %s</div>', esc_html($filename), $plugin_summary));
 
     // Forcer le téléchargement du fichier
     header('Content-Type: application/json');

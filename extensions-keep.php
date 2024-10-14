@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Extensions Keep
  * Plugin URI: https://github.com/pflry/extensions-keep
- * Description: Simplifiez la gestion de vos extensions : exportez, installez et partagez en un clic.
+ * Description: Simplify your extension management: export, install and share in a single click.
  * Version: 1.0.0
  * Author: Paul Fleury
  * Author URI: https://paulfleury.fr
@@ -28,6 +28,12 @@ require_once EKEEP_PLUGIN_DIR . 'includes/class-ekeep-installer.php';
 require_once EKEEP_PLUGIN_DIR . 'includes/class-ekeep-logger.php';
 require_once EKEEP_PLUGIN_DIR . 'includes/class-ekeep-icons.php';
 require_once EKEEP_PLUGIN_DIR . 'admin/class-ekeep-admin.php';
+
+// Internationalisation
+function ekeep_load_textdomain() {
+  load_plugin_textdomain('extensions-keep', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+}
+add_action('plugins_loaded', 'ekeep_load_textdomain');
 
 // Initialiser le plugin
 function ekeep_init() {
