@@ -112,6 +112,10 @@ msgstr "Le fichier importé n'est pas un JSON valide ou ne respecte pas la struc
 msgid "Import complete. %s"
 msgstr "Import terminé. %s"
 
+#: includes/class-ekeep-manager.php:116
+msgid "none"
+msgstr "aucune"
+
 #: includes/class-ekeep-saver.php:11
 msgid "You don't have sufficient permissions to perform this action."
 msgstr "Vous n'avez pas les permissions suffisantes pour effectuer cette action."

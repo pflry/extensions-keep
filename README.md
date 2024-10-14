@@ -52,9 +52,14 @@ A: No, Extensions Keep does not manage plugin updates. It allows you to maintain
 
 ## Screenshots
 
-1. Extensions Keep main interface
-2. Exporting the plugin list
-3. Importing and installing plugins
+Extensions Keep interface
+![Extensions Keep interface](assets/screenshot-1.png)
+
+Exporting the plugin list
+![Exporting the plugin list](assets/screenshot-2.png)
+
+Importing and installing plugins
+![Importing and installing plugins](assets/screenshot-3.png)
 
 ## Changelog
 

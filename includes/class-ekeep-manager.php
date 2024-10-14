@@ -113,7 +113,7 @@ class EKEEP_Plugin_Manager {
 
   private function format_plugin_list($plugins) {
     if (empty($plugins)) {
-      return "aucune";
+      return esc_html__('none', 'extensions-keep');
     }
     $formatted = [];
     foreach ($plugins as $plugin) {

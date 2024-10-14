@@ -99,6 +99,10 @@ msgstr ""
 msgid "Import complete. %s"
 msgstr ""
 
+#: includes/class-ekeep-manager.php:116
+msgid "none"
+msgstr ""
+
 #: includes/class-ekeep-saver.php:11
 msgid "You don't have sufficient permissions to perform this action."
 msgstr ""

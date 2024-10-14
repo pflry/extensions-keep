@@ -1,0 +1,60 @@
+{
+    "plugins": [
+        {
+            "name": "admin-menu-editor\/menu-editor.php",
+            "version": "1.12.4",
+            "title": "Admin Menu Editor",
+            "author": "<a href=\"http:\/\/w-shadow.com\/blog\/\">Janis Elsts<\/a>",
+            "description": "Lets you directly edit the WordPress admin menu. You can re-order, hide or rename existing menus, add custom menus and more. <cite>By <a href=\"http:\/\/w-shadow.com\/blog\/\">Janis Elsts<\/a>.<\/cite>"
+        },
+        {
+            "name": "extensions-keep\/extensions-keep.php",
+            "version": "1.0.0",
+            "title": "Extensions Keep",
+            "author": "<a href=\"https:\/\/paulfleury.fr\">Paul Fleury<\/a>",
+            "description": "Simplify your extension management: export, install and share in a single click. <cite>By <a href=\"https:\/\/paulfleury.fr\">Paul Fleury<\/a>.<\/cite>"
+        },
+        {
+            "name": "plugin-check\/plugin.php",
+            "version": "1.2.0",
+            "title": "Plugin Check (PCP)",
+            "author": "WordPress Performance Team and Plugin Review Team",
+            "description": "Plugin Check is a WordPress.org tool which provides checks to help plugins meet the directory requirements and follow various best practices. <cite>By WordPress Performance Team and Plugin Review Team.<\/cite>"
+        },
+        {
+            "name": "regenerate-thumbnails\/regenerate-thumbnails.php",
+            "version": "3.1.6",
+            "title": "Regenerate Thumbnails",
+            "author": "<a href=\"https:\/\/alex.blog\/\">Alex Mills (Viper007Bond)<\/a>",
+            "description": "Regenerate the thumbnails for one or more of your image uploads. Useful when changing their sizes or your theme. <cite>By <a href=\"https:\/\/alex.blog\/\">Alex Mills (Viper007Bond)<\/a>.<\/cite>"
+        },
+        {
+            "name": "safe-svg\/safe-svg.php",
+            "version": "2.2.6",
+            "title": "Safe SVG",
+            "author": "<a href=\"https:\/\/10up.com\">10up<\/a>",
+            "description": "Enable SVG uploads and sanitize them to stop XML\/SVG vulnerabilities in your WordPress website <cite>By <a href=\"https:\/\/10up.com\">10up<\/a>.<\/cite>"
+        },
+        {
+            "name": "simple-history\/index.php",
+            "version": "5.0.1",
+            "title": "Simple History",
+            "author": "<a href=\"https:\/\/simple-history.com\/\">P\u00e4r Thernstr\u00f6m<\/a>",
+            "description": "Plugin that logs various things that occur in WordPress and then presents those events in a very nice GUI. <cite>By <a href=\"https:\/\/simple-history.com\/\">P\u00e4r Thernstr\u00f6m<\/a>.<\/cite>"
+        },
+        {
+            "name": "sje-simple-json-editor\/simple-json-editor.php",
+            "version": "1.1.0",
+            "title": "SJE - Simple JSON Editor",
+            "author": "<a href=\"https:\/\/paulfleury.fr\">Paul Fleury<\/a>",
+            "description": "An elegant and easy-to-use JSON editor for your WordPress theme files <cite>By <a href=\"https:\/\/paulfleury.fr\">Paul Fleury<\/a>.<\/cite>"
+        },
+        {
+            "name": "wp-sweep\/wp-sweep.php",
+            "version": "1.1.8",
+            "title": "WP-Sweep",
+            "author": "<a href=\"https:\/\/lesterchan.net\">Lester 'GaMerZ' Chan<\/a>",
+            "description": "WP-Sweep allows you to clean up unused, orphaned and duplicated data in your WordPress. It cleans up revisions, auto drafts, unapproved comments, spam comments, trashed comments, orphan post meta, orphan comment meta, orphan user meta, orphan term relationships, unused terms, duplicated post meta, duplicated comment meta, duplicated user meta and transient options. It also optimizes your database tables. <cite>By <a href=\"https:\/\/lesterchan.net\">Lester 'GaMerZ' Chan<\/a>.<\/cite>"
+        }
+    ]
+}

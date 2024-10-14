@@ -49,7 +49,7 @@ No, Extensions Keep does not manage plugin updates. It allows you to maintain a 
 
 == Screenshots ==
 
-1. Extensions Keep main interface
+1. Extensions Keep interface
 2. Exporting the plugin list
 3. Importing and installing plugins
 
