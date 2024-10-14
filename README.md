@@ -43,15 +43,19 @@ After activation, access the tool via the "Plugins" > "Extensions Keep" menu in 
 ## FAQ
 
 **Q: Does Extensions Keep backup my plugin files?**
+
 A: No, Extensions Keep only backs up the list of your active plugins and their versions. It does not backup the plugin files themselves.
 
 **Q: Can I use Extensions Keep to transfer plugins between different sites?**
+
 A: Yes, you can export the list of your plugins from one site and import it on another site to install the same plugins.
 
 **Q: Does Extensions Keep automatically update my plugins?**
+
 A: No, Extensions Keep does not manage plugin updates. It allows you to maintain a consistent list of plugins across different sites.
 
 **Q: In which languages is Extensions Keep available?**
+
 A: Extensions Keep is currently available in English and French. The plugin will automatically use your WordPress language settings.
 
 ## Screenshots
