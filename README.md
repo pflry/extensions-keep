@@ -19,6 +19,7 @@ Extensions Keep is a simple and practical tool for anyone who needs to efficient
 - Secure backup of your plugin configurations
 - Compatible with all WordPress plugins
 - Intelligent management of plugin versions
+- Available in English and French
 
 ## Installation
 
@@ -50,6 +51,9 @@ A: Yes, you can export the list of your plugins from one site and import it on a
 **Q: Does Extensions Keep automatically update my plugins?**
 A: No, Extensions Keep does not manage plugin updates. It allows you to maintain a consistent list of plugins across different sites.
 
+**Q: In which languages is Extensions Keep available?**
+A: Extensions Keep is currently available in English and French. The plugin will automatically use your WordPress language settings.
+
 ## Screenshots
 
 Extensions Keep interface
@@ -68,6 +72,7 @@ Importing and installing plugins
 - Intuitive user interface for exporting and importing plugins
 - Secure backup of plugin lists
 - Functionality to install plugins from an imported list
+- Added French translation
 
 ## Contributing
 

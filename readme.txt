@@ -21,6 +21,7 @@ Key features:
 * Secure backup of your plugin configurations
 * Compatible with all WordPress plugins
 * Intelligent management of plugin versions
+* Available in English and French
 
 == Installation ==
 
@@ -47,6 +48,9 @@ Yes, you can export the list of your plugins from one site and import it on anot
 = Does Extensions Keep automatically update my plugins? =
 No, Extensions Keep does not manage plugin updates. It allows you to maintain a consistent list of plugins across different sites.
 
+= In which languages is Extensions Keep available? =
+Extensions Keep is currently available in English and French. The plugin will automatically use your WordPress language settings.
+
 == Screenshots ==
 
 1. Extensions Keep interface
@@ -60,6 +64,7 @@ No, Extensions Keep does not manage plugin updates. It allows you to maintain a 
 * Intuitive user interface for exporting and importing plugins
 * Secure backup of plugin lists
 * Functionality to install plugins from an imported list
+* Added French translation
 
 == Upgrade Notice ==
 
