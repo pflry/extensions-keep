@@ -90,4 +90,4 @@ This project is licensed under the GPL v3 or later. See the [LICENSE](https://ww
 
 Created by [Paul Fleury](https://paulfleury.fr)
 
-🥤[Buy me a coffee](buymeacoffee.com/paulfleury)
+🥤[Buy me a coffee](https://buymeacoffee.com/paulfleury)
