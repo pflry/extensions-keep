@@ -1,5 +1,6 @@
 === Extensions Keep ===
 Contributors: Paul Fleury
+Donate link: https://buymeacoffee.com/paulfleury
 Tags: plugin management, export, import, backup, restore
 Requires at least: 5.0
 Tested up to: 6.6.2
